@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    android:layout_margin="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:id="@+id/textview_location"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textSize="@dimen/abc_text_size_headline_material" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/imageview_thumbnail"
+            android:layout_below="@+id/textview_location"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/thumbnail_from_googlemap" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:layout_below="@+id/imageview_thumbnail"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/linearLayout">
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:id="@+id/radiogroup_closer_or_further"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/radiobutton_near"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/near_than"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:checked="true" />
+                <RadioButton
+                    android:id="@+id/radiobutton_away"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/away_than"
+                    android:enabled="true" />
+            </RadioGroup>
+            <EditText
+                android:id="@+id/edittext_distance"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/meter"
+                android:id="@+id/textView2" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edittext_todo"
+            android:layout_above="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:hint="what to do"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

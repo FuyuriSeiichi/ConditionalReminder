@@ -1,0 +1,18 @@
+<resources>
+    <!--
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=C1:9C:58:44:1C:EF:9C:43:92:58:55:60:88:B8:DF:BF:D3:58:32:58%3Bhomebrew.fuyuri_seiji.org.conditionalreminder
+
+    You can also add your credentials to an existing key, using this line:
+    C1:9C:58:44:1C:EF:9C:43:92:58:55:60:88:B8:DF:BF:D3:58:32:58;homebrew.fuyuri_seiji.org.conditionalreminder
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">GENERATE BY GOOGLE API CONSOLE</string>
+</resources>

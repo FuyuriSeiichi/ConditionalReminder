@@ -1,0 +1,66 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" >
+
+  <fragment
+      xmlns:tools="http://schemas.android.com/tools"
+      android:id="@+id/map"
+      android:name="com.google.android.gms.maps.SupportMapFragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:context="homebrew.fuyuri_seiji.org.conditionalreminder.MapsActivity" >
+  </fragment>
+  
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <!--This leave blank for map's upper-right locate me button, that's why weight is set-->
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+      <android.support.v7.widget.CardView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="@color/cardview_light_background"
+          android:layout_weight="8">
+        <fragment
+            android:id="@+id/place_autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            />
+      </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_alignParentBottom="true"
+          android:layout_centerHorizontal="true"
+          android:gravity="right">
+
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/new_remind"
+              android:id="@+id/button_new_remind"
+              android:onClick="StartEditCondActivity"/>
+
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/reminds_list"
+              android:id="@+id/button_reminds_list"
+              android:onClick="StartRemindsListActivity"/>
+
+      </LinearLayout>
+
+  </RelativeLayout>
+
+</FrameLayout>
